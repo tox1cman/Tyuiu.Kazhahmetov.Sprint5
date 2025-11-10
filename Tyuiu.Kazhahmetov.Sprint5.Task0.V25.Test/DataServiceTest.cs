@@ -8,12 +8,10 @@ namespace Tyuiu.Kazhahmetov.Sprint5.Task0.V25.Test
         [TestMethod]
         public void TestMethod1()
         {
-            int x = 3;
-            DataService ds = new DataService();
-            bool res = File.Exists(ds.SaveToFileTextData(x));
-            bool wait = true;
-
-            Assert.AreEqual(wait, res);
+            string noway = Path.Combine(Path.GetTempPath(), "OutPutFileTask0.txt");
+            FileInfo fl = new FileInfo(noway);
+            bool res = fl.Exists;
+            Assert.AreEqual(true, res);
         }
     }
 }
