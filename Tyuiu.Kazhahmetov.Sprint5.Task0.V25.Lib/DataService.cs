@@ -1,5 +1,5 @@
-﻿using tyuiu.cources.programming.interfaces.Sprint5;
-using System.IO;
+﻿using System.IO;
+using tyuiu.cources.programming.interfaces.Sprint5;
 namespace Tyuiu.Kazhahmetov.Sprint5.Task0.V25.Lib
 {
     public class DataService : ISprint5Task0V25
