@@ -18,9 +18,10 @@ namespace Tyuiu.Kazhahmetov.Sprint5.Task1.V16.Lib
             double y;
             for (int x = startValue; x <= stopValue; x++)
             {
-                y = Math.Sin(x) + ((2 * x)/3) - Math.Cos(x) * 4 * x;
+                y = Math.Sin(x) - (4 * x * Math.Cos(x)) + (2 * x / 3.0);
                 y = Math.Round(y, 2);
                 string stry = Convert.ToString(y);
+
                 if (x != stopValue)
                 {
                     File.AppendAllText(noway, stry + Environment.NewLine);
