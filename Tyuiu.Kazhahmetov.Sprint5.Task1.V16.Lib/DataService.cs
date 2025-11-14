@@ -18,9 +18,9 @@ namespace Tyuiu.Kazhahmetov.Sprint5.Task1.V16.Lib
             double y;
             for (int x = startValue; x <= stopValue; x++)
             {
-                y = Math.Sin(x) - (4 * x * Math.Cos(x)) + (2 * x / 3.0);
+                y = Math.Sin(x) - (4.0 * x * Math.Cos(x)) + (2.0 * x / 3.0);
                 y = Math.Round(y, 2);
-                string stry = Convert.ToString(y);
+                string stry = y.ToString("0.00");
 
                 if (x != stopValue)
                 {
