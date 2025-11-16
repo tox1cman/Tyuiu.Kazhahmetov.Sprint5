@@ -16,8 +16,8 @@ namespace Tyuiu.Kazhahmetov.Sprint5.Task3.V30.Lib
             }
 
             double y;
-            y = (x * x * x - 1.0) / (4.0 * x * x);
-            y = Math.Round(y, 2);
+            y = (Math.Pow(x, 3) - 1) / (4.0 * Math.Pow(x, 2));
+            y = Math.Round(y, 3);
 
             using (BinaryWriter writer = new BinaryWriter(File.Open(noway, FileMode.OpenOrCreate), Encoding.UTF8))
             {
