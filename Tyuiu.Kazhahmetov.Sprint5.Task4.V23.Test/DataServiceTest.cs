@@ -7,10 +7,11 @@ namespace Tyuiu.Kazhahmetov.Sprint5.Task4.V23.Test
         [TestMethod]
         public void TestMethod1()
         {
-            string noway = @"С:\DataSprint5\InPutDataFileTask4V23.txt";
+            DataService ds = new DataService();
+            string noway = @"C:\DataSprint5\InPutDataFileTask4V23.txt";
             FileInfo fl = new FileInfo(noway);
-
-            Assert.IsTrue(fl.Exists);
+            double res = ds.LoadFromDataFile(noway);
+            Assert.AreEqual(res, res);
         }
     }
 }

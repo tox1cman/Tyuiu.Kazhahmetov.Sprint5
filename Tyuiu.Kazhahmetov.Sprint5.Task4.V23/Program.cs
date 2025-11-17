@@ -14,7 +14,7 @@ Console.WriteLine("*************************************************************
 Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ:                                                        *");
 Console.WriteLine("***************************************************************************");
 
-string noway = $@"{Directory.GetCurrentDirectory()}\InPutDataFileTask4V23.txt";
+string noway = @"C:\DataSprint5\InPutDataFileTask4V23.txt";
 Console.WriteLine(noway);
 
 Console.WriteLine("***************************************************************************");
