@@ -12,18 +12,10 @@ namespace Tyuiu.Kazhahmetov.Sprint5.Task5.V9.Lib
                 foreach (string numb in line.Split(" "))
                 {
                     double x = Convert.ToDouble(numb);
-                    if (numb.Contains("."))
+                    if (x > res)
                     {
-                        continue;
+                        res = x;
                     }
-                    else
-                    {
-                        if (x > res)
-                        {
-                            res = x;
-                        }
-                    }
-
                 }
                 return res;
             }
