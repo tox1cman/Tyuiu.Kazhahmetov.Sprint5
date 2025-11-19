@@ -7,18 +7,18 @@ namespace Tyuiu.Kazhahmetov.Sprint5.Task5.V9.Lib
         public double LoadFromDataFile(string path)
         {
             double res = -1.0;
-            using (StreamReader reader = new StreamReader(path))
+            string line = File.ReadAllText(path);
             {
-                string line;
-                while ((line = reader.ReadLine()) != null)
+                foreach (string numb in line.Split(" "))
                 {
-                    if (Convert.ToDouble(line.Replace(".", ",")) > res)
+                    double x = Convert.ToDouble(numb.Replace(".", ","));
+                    if (x > res)
                     {
-                        res = Convert.ToDouble(line.Replace(".", ","));
+                        res = x;
                     }
                 }
+                return res;
             }
-            return res;
         }
     }
 }
