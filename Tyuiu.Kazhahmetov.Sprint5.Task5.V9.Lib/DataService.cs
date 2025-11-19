@@ -6,15 +6,15 @@ namespace Tyuiu.Kazhahmetov.Sprint5.Task5.V9.Lib
     {
         public double LoadFromDataFile(string path)
         {
-            int res = -1;
+            double res = -1.0;
             using (StreamReader reader = new StreamReader(path))
             {
                 string line;
                 while ((line = reader.ReadLine()) != null)
                 {
-                    if (Convert.ToInt32(line) > res)
+                    if (Convert.ToDouble(line.Replace(".", ",")) > res)
                     {
-                        res = Convert.ToInt32(line);
+                        res = Convert.ToDouble(line.Replace(".", ","));
                     }
                 }
             }
