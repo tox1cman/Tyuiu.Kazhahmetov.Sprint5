@@ -11,11 +11,19 @@ namespace Tyuiu.Kazhahmetov.Sprint5.Task5.V9.Lib
             {
                 foreach (string numb in line.Split(" "))
                 {
-                    double x = Convert.ToDouble(numb);
-                    if (x > res)
+                    double x = Convert.ToDouble(numb.Replace(".", ","));
+                    if (numb.Contains("."))
                     {
-                        res = x;
+                        continue;
                     }
+                    else
+                    {
+                        if (x > res)
+                        {
+                            res = x;
+                        }
+                    }
+
                 }
                 return res;
             }
