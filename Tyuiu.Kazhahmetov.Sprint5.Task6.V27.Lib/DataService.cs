@@ -8,13 +8,15 @@ namespace Tyuiu.Kazhahmetov.Sprint5.Task6.V27.Lib
             int count = 0;
             string line = File.ReadAllText(path);
 
-            foreach (string numb in line.Split(" "))
+            foreach (string numb in line.Split())
             {
-                int x = Convert.ToInt32(numb);
-                if ((x > 99) && (x < 1000))
+                if (int.TryParse(numb, out int x))
                 {
-                    count++;
-                } 
+                    if ((x > 99) && (x < 1000))
+                    {
+                        count++;
+                    }
+                }
             }
             return count;
         }
