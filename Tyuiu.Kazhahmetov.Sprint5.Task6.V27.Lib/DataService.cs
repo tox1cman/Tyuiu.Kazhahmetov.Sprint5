@@ -6,13 +6,15 @@ namespace Tyuiu.Kazhahmetov.Sprint5.Task6.V27.Lib
         public int LoadFromDataFile(string path)
         {
             int count = 0;
-            using (StreamReader sr = new StreamReader(path))
+            string line = File.ReadAllText(path);
+
+            foreach (string numb in line.Split(" "))
             {
-                string line;
-                while ((line = sr.ReadLine()) != null)
+                int x = Convert.ToInt32(numb);
+                if ((x > 99) && (x < 1000))
                 {
                     count++;
-                }
+                } 
             }
             return count;
         }
